@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'user_data.freezed.dart';
+part '../data/user_data.freezed.dart';
 
 @freezed
 class UserData with _$UserData {

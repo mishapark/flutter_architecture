@@ -10,10 +10,7 @@ class BlocFactory {
   static final instance = BlocFactory();
 
   void initialize() {
-    //GETTING SERVICE FROM DATA LAYER
     ServiceProvider.instance.initialize();
-    ServiceProvider.instance.get<MyServices>();
-
     _getIt.registerFactory<MainBloc>(
       () => MainBloc(
         myServices: ServiceProvider.instance.get<MyServices>(),
