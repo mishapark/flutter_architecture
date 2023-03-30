@@ -22,6 +22,12 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
+  void dispose() {
+    BlocFactory.instance.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Provider(
       create: (context) => _mainBloc,
