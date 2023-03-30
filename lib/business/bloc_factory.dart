@@ -17,11 +17,4 @@ class BlocFactory {
       ),
     );
   }
-
-  void dispose() {
-    ServiceProvider.instance.dispose();
-    _getIt.unregister<MainBloc>(
-      disposingFunction: (bloc) => bloc.dispose(),
-    );
-  }
 }

@@ -12,8 +12,4 @@ class ServiceProvider {
   void initialize() {
     _getIt.registerLazySingleton<MyServices>(() => DummyService());
   }
-
-  void dispose() {
-    _getIt.unregister<MyServices>();
-  }
 }
